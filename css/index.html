@@ -1,0 +1,325 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="CSS Practical Programs">
+
+    <title>CSS Programs | Web Practicals</title>
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #111827;
+            color: white;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar {
+            width: 90%;
+            max-width: 1200px;
+            min-height: 70px;
+
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #60a5fa;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #1e3a8a,
+                    #2563eb
+                );
+
+            color: white;
+            text-align: center;
+
+            padding: 75px 20px;
+        }
+
+        .badge {
+            display: inline-block;
+
+            padding: 7px 16px;
+            margin-bottom: 18px;
+
+            border-radius: 30px;
+
+            background:
+                rgba(255, 255, 255, 0.12);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.3);
+
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size:
+                clamp(38px, 6vw, 58px);
+
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #dbeafe;
+
+            line-height: 1.7;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 60px 0;
+        }
+
+        .page-heading {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .page-heading h2 {
+            font-size: 32px;
+
+            color: #111827;
+
+            margin-bottom: 10px;
+        }
+
+        .page-heading p {
+            color: #6b7280;
+        }
+
+
+        /* =========================
+           PROGRAM LIST
+        ========================= */
+
+        .program-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+            list-style: none;
+        }
+
+        .program-item {
+            background: white;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius: 14px;
+
+            padding: 22px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0, 0, 0, 0.05);
+
+            transition: 0.3s;
+        }
+
+        .program-item:hover {
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* =========================
+           NUMBER
+        ========================= */
+
+        .number {
+            min-width: 48px;
+            height: 48px;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #dbeafe;
+
+            color: #2563eb;
+
+            font-weight: bold;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           PROGRAM INFORMATION
+        ========================= */
+
+        .program-info {
+            flex: 1;
+        }
+
+        .program-info h3 {
+            font-size: 18px;
+
+            margin-bottom: 6px;
+
+            color: #111827;
+        }
+
+        .program-info p {
+            color: #6b7280;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           VIEW BUTTON
+        ========================= */
+
+        .view-button {
+            display: inline-block;
+
+            padding: 9px 15px;
+
+            background: #2563eb;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            white-space: nowrap;
+
+            transition: 0.3s;
+        }
+
+        .view-button:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* =========================
+           NAVIGATION BUTTONS
+        ========================= */
+
+        .bottom-navigation {
+            margin-top: 50px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+```

@@ -1,0 +1,1679 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="JavaScript Practical Programs">
+
+    <title>JavaScript Programs | Web Practicals</title>
+
+
+    <style>
+
+        /* =================================
+           RESET
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f5f7fb;
+
+            color: #1f2937;
+
+            min-height: 100vh;
+        }
+
+
+        /* =================================
+           HEADER
+        ================================= */
+
+        header {
+            background: #111827;
+
+            color: white;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 4px 15px
+                rgba(0, 0, 0, 0.15);
+        }
+
+
+        .navbar {
+            width: 90%;
+
+            max-width: 1200px;
+
+            min-height: 70px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+            font-size: 22px;
+
+            font-weight: bold;
+        }
+
+
+        .logo span {
+            color: #60a5fa;
+        }
+
+
+        .nav-links {
+            display: flex;
+
+            list-style: none;
+
+            gap: 25px;
+        }
+
+
+        .nav-links a {
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* =================================
+           HERO
+        ================================= */
+
+        .hero {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #78350f,
+                    #d97706
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 80px 20px;
+        }
+
+
+        .badge {
+
+            display: inline-block;
+
+            padding: 7px 16px;
+
+            margin-bottom: 18px;
+
+            border-radius: 30px;
+
+            background:
+                rgba(255,255,255,0.12);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.3);
+
+            font-size: 14px;
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(38px, 6vw, 58px);
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero p {
+
+            max-width: 750px;
+
+            margin: auto;
+
+            color: #fef3c7;
+
+            line-height: 1.7;
+
+            font-size: 17px;
+        }
+
+
+        /* =================================
+           MAIN
+        ================================= */
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding: 60px 0;
+        }
+
+
+        .page-heading {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+
+        .page-heading h2 {
+
+            font-size: 32px;
+
+            color: #111827;
+
+            margin-bottom: 10px;
+        }
+
+
+        .page-heading p {
+
+            color: #6b7280;
+        }
+
+
+        /* =================================
+           CATEGORY SECTION
+        ================================= */
+
+        .category {
+
+            margin-bottom: 45px;
+        }
+
+
+        .category-header {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 20px;
+
+            padding-bottom: 12px;
+
+            border-bottom:
+                2px solid #e5e7eb;
+        }
+
+
+        .category-number {
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #fef3c7;
+
+            color: #d97706;
+
+            font-weight: bold;
+        }
+
+
+        .category-header h2 {
+
+            font-size: 24px;
+
+            color: #111827;
+        }
+
+
+        .category-header p {
+
+            margin-left: auto;
+
+            color: #6b7280;
+
+            font-size: 14px;
+        }
+
+
+        /* =================================
+           PROGRAM CARDS
+        ================================= */
+
+        .program-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .program-card {
+
+            background: white;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius: 14px;
+
+            padding: 22px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.05);
+
+            transition: 0.3s;
+        }
+
+
+        .program-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(0,0,0,0.1);
+        }
+
+
+        .program-number {
+
+            min-width: 48px;
+
+            height: 48px;
+
+            border-radius: 12px;
+
+            background: #fef3c7;
+
+            color: #d97706;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+
+        .program-content {
+
+            flex: 1;
+        }
+
+
+        .program-content h3 {
+
+            font-size: 17px;
+
+            color: #111827;
+
+            margin-bottom: 6px;
+        }
+
+
+        .program-content p {
+
+            font-size: 13px;
+
+            color: #6b7280;
+
+            line-height: 1.5;
+        }
+
+
+        .view-button {
+
+            display: inline-block;
+
+            padding: 9px 14px;
+
+            background: #d97706;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            white-space: nowrap;
+
+            transition: 0.3s;
+        }
+
+
+        .view-button:hover {
+
+            background: #b45309;
+        }
+
+
+        /* =================================
+           NAVIGATION
+        ================================= */
+
+        .bottom-navigation {
+
+            margin-top: 50px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .nav-button {
+
+            padding: 12px 22px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .home-button {
+
+            background: #111827;
+
+            color: white;
+        }
+
+
+        .home-button:hover {
+
+            background: #374151;
+        }
+
+
+        .top-button {
+
+            background: #e5e7eb;
+
+            color: #111827;
+        }
+
+
+        .top-button:hover {
+
+            background: #d1d5db;
+        }
+
+
+        /* =================================
+           FOOTER
+        ================================= */
+
+        footer {
+
+            background: #0b1120;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+
+        footer p {
+
+            color: #9ca3af;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =================================
+           RESPONSIVE DESIGN
+        ================================= */
+
+        @media (max-width: 800px) {
+
+            .program-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .category-header {
+
+                align-items: flex-start;
+
+                flex-wrap: wrap;
+            }
+
+
+            .category-header p {
+
+                width: 100%;
+
+                margin-left: 60px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                padding: 18px 0;
+
+                gap: 15px;
+            }
+
+
+            .nav-links {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+            }
+
+
+            .program-card {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+
+            .view-button {
+
+                width: 100%;
+
+                text-align: center;
+            }
+
+
+            .category-header p {
+
+                margin-left: 0;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- =================================
+         HEADER
+    ================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                Web<span>Practicals</span>
+
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#mini-projects">
+                        Mini Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#dom">
+                        DOM
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#events">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#forms">
+                        Forms
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =================================
+         HERO
+    ================================== -->
+
+    <section class="hero">
+
+        <div class="badge">
+            JAVASCRIPT PRACTICAL PROGRAMS
+        </div>
+
+
+        <h1>
+            JavaScript Programs
+        </h1>
+
+
+        <p>
+
+            Explore JavaScript programs covering
+            mini projects, DOM manipulation, events,
+            forms and validation, browser objects,
+            browser features and web storage.
+
+        </p>
+
+    </section>
+
+
+    <!-- =================================
+         MAIN CONTENT
+    ================================== -->
+
+    <main class="container">
+
+
+        <div class="page-heading">
+
+            <h2>
+                JavaScript Practical Programs
+            </h2>
+
+            <p>
+                Select a category and open any program.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================
+             01 MINI PROJECTS
+        ================================== -->
+
+        <section
+            class="category"
+            id="mini-projects"
+        >
+
+            <div class="category-header">
+
+                <div class="category-number">
+                    01
+                </div>
+
+                <h2>
+                    Mini Projects
+                </h2>
+
+                <p>
+                    Interactive JavaScript applications
+                </p>
+
+            </div>
+
+
+            <div class="program-grid">
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        01
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Digital Calculator
+                        </h3>
+
+                        <p>
+                            Perform basic arithmetic
+                            calculations.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="mini-projects/digital-calculator.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        02
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Digital Clock
+                        </h3>
+
+                        <p>
+                            Display the current time
+                            dynamically.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="mini-projects/digital-clock.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        03
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Stopwatch
+                        </h3>
+
+                        <p>
+                            Start, stop and reset a
+                            digital stopwatch.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="mini-projects/stopwatch.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        04
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Countdown Timer
+                        </h3>
+
+                        <p>
+                            Create a timer that counts
+                            down to zero.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="mini-projects/countdown-timer.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        05
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            To-Do List
+                        </h3>
+
+                        <p>
+                            Add, complete and remove
+                            tasks dynamically.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="mini-projects/todo-list.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             02 DOM MANIPULATION
+        ================================== -->
+
+        <section
+            class="category"
+            id="dom"
+        >
+
+            <div class="category-header">
+
+                <div class="category-number">
+                    02
+                </div>
+
+                <h2>
+                    DOM Manipulation
+                </h2>
+
+                <p>
+                    Dynamically modify webpage elements
+                </p>
+
+            </div>
+
+
+            <div class="program-grid">
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        01
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Change Text
+                        </h3>
+
+                        <p>
+                            Change webpage text using
+                            JavaScript.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="dom/dom-01.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        02
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Change Style
+                        </h3>
+
+                        <p>
+                            Modify element styles using
+                            JavaScript.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="dom/dom-02.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        03
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Create Elements
+                        </h3>
+
+                        <p>
+                            Dynamically create and add
+                            HTML elements.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="dom/dom-03.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        04
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Remove Elements
+                        </h3>
+
+                        <p>
+                            Remove HTML elements from
+                            the document.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="dom/dom-04.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        05
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Dynamic List
+                        </h3>
+
+                        <p>
+                            Create and manage a list
+                            dynamically.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="dom/dom-05.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             03 JAVASCRIPT EVENTS
+        ================================== -->
+
+        <section
+            class="category"
+            id="events"
+        >
+
+            <div class="category-header">
+
+                <div class="category-number">
+                    03
+                </div>
+
+                <h2>
+                    JavaScript Events
+                </h2>
+
+                <p>
+                    Handle user interactions
+                </p>
+
+            </div>
+
+
+            <div class="program-grid">
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        01
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Click Event
+                        </h3>
+
+                        <p>
+                            Execute JavaScript when
+                            a button is clicked.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="events/event-01.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        02
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Mouse Events
+                        </h3>
+
+                        <p>
+                            Demonstrate mouseover,
+                            mouseout and click events.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="events/event-02.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        03
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Keyboard Events
+                        </h3>
+
+                        <p>
+                            Detect keyboard input using
+                            JavaScript events.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="events/event-03.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        04
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Form Events
+                        </h3>
+
+                        <p>
+                            Handle submit, focus and
+                            input events.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="events/event-04.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             04 FORMS AND VALIDATION
+        ================================== -->
+
+        <section
+            class="category"
+            id="forms"
+        >
+
+            <div class="category-header">
+
+                <div class="category-number">
+                    04
+                </div>
+
+                <h2>
+                    Forms &amp; Validation
+                </h2>
+
+                <p>
+                    Validate user input
+                </p>
+
+            </div>
+
+
+            <div class="program-grid">
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        01
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Registration Form
+                        </h3>
+
+                        <p>
+                            Create a registration form
+                            with JavaScript validation.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="forms/registration-form.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        02
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Login Form
+                        </h3>
+
+                        <p>
+                            Validate username and
+                            password fields.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="forms/login-form.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        03
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Email Validation
+                        </h3>
+
+                        <p>
+                            Validate an email address
+                            using JavaScript.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="forms/email-validation.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        04
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Password Validation
+                        </h3>
+
+                        <p>
+                            Check password requirements
+                            using JavaScript.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="forms/password-validation.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             05 BROWSER OBJECTS
+        ================================== -->
+
+        <section
+            class="category"
+            id="browser"
+        >
+
+            <div class="category-header">
+
+                <div class="category-number">
+                    05
+                </div>
+
+                <h2>
+                    Browser Objects &amp; Features
+                </h2>
+
+                <p>
+                    Work with browser APIs
+                </p>
+
+            </div>
+
+
+            <div class="program-grid">
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        01
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Window Object
+                        </h3>
+
+                        <p>
+                            Demonstrate properties and
+                            methods of the window object.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="browser/browser-01.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        02
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Location Object
+                        </h3>
+
+                        <p>
+                            Display and work with
+                            browser location information.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="browser/browser-02.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        03
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Navigator Object
+                        </h3>
+
+                        <p>
+                            Display information about
+                            the user's browser.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="browser/browser-03.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        04
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Date and Time
+                        </h3>
+
+                        <p>
+                            Display current date and
+                            time using JavaScript.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="browser/browser-04.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             06 WEB STORAGE
+        ================================== -->
+
+        <section
+            class="category"
+            id="storage"
+        >
+
+            <div class="category-header">
+
+                <div class="category-number">
+                    06
+                </div>
+
+                <h2>
+                    Web Storage
+                </h2>
+
+                <p>
+                    Store data in the browser
+                </p>
+
+            </div>
+
+
+            <div class="program-grid">
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        01
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Local Storage
+                        </h3>
+
+                        <p>
+                            Store and retrieve data using
+                            localStorage.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="storage/local-storage.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        02
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Session Storage
+                        </h3>
+
+                        <p>
+                            Store temporary data using
+                            sessionStorage.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="storage/session-storage.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-number">
+                        03
+                    </div>
+
+                    <div class="program-content">
+
+                        <h3>
+                            Storage To-Do List
+                        </h3>
+
+                        <p>
+                            Save to-do list data in
+                            local storage.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="storage/storage-todo.html"
+                        class="view-button"
+                    >
+                        View
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             NAVIGATION
+        ================================== -->
+
+        <div class="bottom-navigation">
+
+            <a
+                href="../index.html"
+                class="nav-button home-button"
+            >
+                ← Back to Home
+            </a>
+
+
+            <a
+                href="#top"
+                class="nav-button top-button"
+            >
+                ↑ Back to Top
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer>
+
+        <p>
+            HTML • CSS • JavaScript Practical Programs
+        </p>
+
+        <p>
+            JavaScript Programs Section
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
