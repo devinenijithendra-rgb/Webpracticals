@@ -1,0 +1,1191 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="HTML Practical Programs">
+
+    <title>HTML Programs | Web Practicals</title>
+
+
+    <style>
+
+        /* ==============================
+           RESET
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f5f7fb;
+
+            color: #1f2937;
+
+            min-height: 100vh;
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        header {
+
+            background: #111827;
+
+            color: white;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 4px 15px
+                rgba(0, 0, 0, 0.15);
+        }
+
+
+        .navbar {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            min-height: 70px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+
+            font-size: 22px;
+
+            font-weight: bold;
+        }
+
+
+        .logo span {
+
+            color: #60a5fa;
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            list-style: none;
+
+            gap: 25px;
+        }
+
+
+        .nav-links a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+
+            color: #60a5fa;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #991b1b,
+                    #dc2626
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 75px 20px;
+        }
+
+
+        .hero .badge {
+
+            display: inline-block;
+
+            padding: 7px 16px;
+
+            margin-bottom: 18px;
+
+            border-radius: 30px;
+
+            background:
+                rgba(255,255,255,0.12);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.3);
+
+            font-size: 14px;
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(38px, 6vw, 58px);
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #fee2e2;
+
+            line-height: 1.7;
+
+            font-size: 17px;
+        }
+
+
+        /* ==============================
+           MAIN CONTAINER
+        ============================== */
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 60px 0;
+        }
+
+
+        .page-heading {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+
+        .page-heading h2 {
+
+            font-size: 32px;
+
+            color: #111827;
+
+            margin-bottom: 10px;
+        }
+
+
+        .page-heading p {
+
+            color: #6b7280;
+        }
+
+
+        /* ==============================
+           PROGRAM LIST
+        ============================== */
+
+        .program-list {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+            list-style: none;
+        }
+
+
+        .program-item {
+
+            background: white;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius: 14px;
+
+            padding: 22px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.05);
+
+            transition: 0.3s;
+        }
+
+
+        .program-item:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(0,0,0,0.1);
+        }
+
+
+        .number {
+
+            min-width: 48px;
+
+            height: 48px;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #fee2e2;
+
+            color: #dc2626;
+
+            font-weight: bold;
+
+            font-size: 16px;
+        }
+
+
+        .program-info {
+
+            flex: 1;
+        }
+
+
+        .program-info h3 {
+
+            font-size: 18px;
+
+            margin-bottom: 6px;
+
+            color: #111827;
+        }
+
+
+        .program-info p {
+
+            color: #6b7280;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        .view-button {
+
+            display: inline-block;
+
+            padding: 9px 15px;
+
+            background: #dc2626;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            white-space: nowrap;
+
+            transition: 0.3s;
+        }
+
+
+        .view-button:hover {
+
+            background: #b91c1c;
+        }
+
+
+        /* ==============================
+           NAVIGATION
+        ============================== */
+
+        .bottom-navigation {
+
+            margin-top: 50px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .nav-button {
+
+            padding: 12px 22px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .home-button {
+
+            background: #111827;
+
+            color: white;
+        }
+
+
+        .home-button:hover {
+
+            background: #374151;
+        }
+
+
+        .top-button {
+
+            background: #e5e7eb;
+
+            color: #111827;
+        }
+
+
+        .top-button:hover {
+
+            background: #d1d5db;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+
+            background: #0b1120;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            margin-top: 20px;
+        }
+
+
+        footer p {
+
+            color: #9ca3af;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 750px) {
+
+            .program-list {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .navbar {
+
+                flex-direction: column;
+
+                padding: 18px 0;
+
+                gap: 15px;
+            }
+
+
+            .nav-links {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .program-item {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+
+            .view-button {
+
+                width: 100%;
+
+                text-align: center;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- ==============================
+         HEADER
+    ============================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                Web<span>Practicals</span>
+
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#programs">
+                        Programs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../css/index.html">
+                        CSS
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../javascript/index.html">
+                        JavaScript
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==============================
+         HERO
+    ============================== -->
+
+    <section class="hero">
+
+        <div class="badge">
+            HTML PRACTICAL PROGRAMS
+        </div>
+
+
+        <h1>
+            HTML Programs
+        </h1>
+
+
+        <p>
+
+            Practice HTML fundamentals by creating
+            structured and semantic web pages using
+            headings, paragraphs, lists, tables,
+            forms, images, links and other HTML elements.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ==============================
+         PROGRAMS
+    ============================== -->
+
+    <main
+        class="container"
+        id="programs"
+    >
+
+        <div class="page-heading">
+
+            <h2>
+                HTML Practical Programs
+            </h2>
+
+            <p>
+                Click any program to open its working
+                implementation.
+            </p>
+
+        </div>
+
+
+        <ol class="program-list">
+
+
+            <!-- PROGRAM 01 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    01
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        Basic HTML Structure
+                    </h3>
+
+                    <p>
+                        Create a basic HTML document
+                        with head and body sections.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="html-01.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+
+            <!-- PROGRAM 02 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    02
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        Headings and Paragraphs
+                    </h3>
+
+                    <p>
+                        Demonstrate HTML headings,
+                        paragraphs and text formatting.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="2.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+
+            <!-- PROGRAM 03 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    03
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        Lists
+                    </h3>
+
+                    <p>
+                        Create ordered, unordered and
+                        description lists.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="3.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+
+            <!-- PROGRAM 04 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    04
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        Links and Images
+                    </h3>
+
+                    <p>
+                        Add hyperlinks and images to
+                        an HTML webpage.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="4.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+
+            <!-- PROGRAM 05 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    05
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        HTML Tables
+                    </h3>
+
+                    <p>
+                        Create tables using rows,
+                        columns and table headings.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="5.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+
+            <!-- PROGRAM 06 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    06
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        HTML Forms
+                    </h3>
+
+                    <p>
+                        Create forms using input fields,
+                        labels, buttons and other controls.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="6.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+
+            <!-- PROGRAM 07 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    07
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        Semantic HTML
+                    </h3>
+
+                    <p>
+                        Use semantic elements such as
+                        header, nav, main, section and footer.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="7.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+
+            <!-- PROGRAM 08 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    08
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        Audio and Video
+                    </h3>
+
+                    <p>
+                        Embed audio and video content
+                        using HTML5 elements.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="8.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+
+            <!-- PROGRAM 09 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    09
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        HTML Iframes
+                    </h3>
+
+                    <p>
+                        Demonstrate how external pages
+                        and content can be embedded.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="9.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+
+            <!-- PROGRAM 10 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    10
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        HTML5 Elements
+                    </h3>
+
+                    <p>
+                        Demonstrate modern HTML5 elements
+                        and page structure.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="10.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+        </ol>
+
+
+                    <!-- PROGRAM 11 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    11
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        CSS styling
+                    </h3>
+
+                    <p>
+                         a webpage with internal and external CSS styling
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="11.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+        </ol>
+
+
+                    <!-- PROGRAM 12 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    12
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        Demonstrating CSS selectors
+                    </h3>
+
+                    <p>
+                        a webpage demonstrating CSS selectors, colors, 
+                        fonts, margins, padding, and borders.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="12.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+        </ol>
+
+
+
+                    <!-- PROGRAM 13 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    13
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                         media queries
+                    </h3>
+
+                    <p>
+                        a responsive webpage using CSS media queries.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="13.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+        </ol>
+
+
+                    <!-- PROGRAM 14 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    14
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        Bootstrap components
+                    </h3>
+
+                    <p>
+                        a webpage using Bootstrap components
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="14.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+        </ol>
+
+
+                    <!-- PROGRAM 15 -->
+
+            <li class="program-item">
+
+                <div class="number">
+                    15
+                </div>
+
+
+                <div class="program-info">
+
+                    <h3>
+                        portfolio webpage
+                    </h3>
+
+                    <p>
+                        a simple personal portfolio webpage using HTML and CSS.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="15.html"
+                    class="view-button"
+                >
+                    View Program
+                </a>
+
+            </li>
+
+
+        </ol>
+
+
+
+
+        <!-- ==============================
+             NAVIGATION
+        ============================== -->
+
+        <div class="bottom-navigation">
+
+            <a
+                href="../index.html"
+                class="nav-button home-button"
+            >
+                ← Back to Home
+            </a>
+
+
+            <a
+                href="#top"
+                class="nav-button top-button"
+            >
+                ↑ Back to Top
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+
+    <footer>
+
+        <p>
+            HTML • CSS • JavaScript Practical Programs
+        </p>
+
+        <p>
+            HTML Programs Section
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
