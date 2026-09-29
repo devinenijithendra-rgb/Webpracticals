@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Flexbox Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Flexbox Container */
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Left Column */
+        .left-column {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Middle Column */
+        .main-content {
+            flex: 2;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Right Column */
+        .right-column {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Website</h1>
+        <p>Three-Column Layout Using Flexbox</p>
+    </header>
+
+    <!-- Three Columns -->
+    <div class="container">
+
+        <!-- Left Column -->
+        <aside class="left-column">
+            <h2>Navigation</h2>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Column -->
+        <main class="main-content">
+            <h2>Main Content</h2>
+
+            <p>
+                Flexbox is a CSS layout system that makes it easy
+                to arrange elements in rows or columns.
+            </p>
+
+            <p>
+                This webpage demonstrates a three-column layout.
+                The center column is larger than the two side columns.
+            </p>
+
+            <h2>Advantages of Flexbox</h2>
+
+            <ul>
+                <li>Easy alignment of elements</li>
+                <li>Flexible column sizes</li>
+                <li>Responsive layouts</li>
+                <li>Simple spacing between elements</li>
+            </ul>
+        </main>
+
+        <!-- Right Column -->
+        <aside class="right-column">
+            <h2>Latest News</h2>
+
+            <p>New web design course available.</p>
+            <p>Learn HTML and CSS.</p>
+            <p>Practice responsive layouts.</p>
+
+            <h2>Quick Links</h2>
+
+            <ul>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">Examples</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Website. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

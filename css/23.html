@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Float and Clear</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+
+        /* Float Property */
+        .box1 {
+            width: 150px;
+            height: 100px;
+            background-color: lightblue;
+            float: left;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .box2 {
+            width: 150px;
+            height: 100px;
+            background-color: lightgreen;
+            float: right;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        /* Clear Property */
+        .clear {
+            clear: both;
+            background-color: orange;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Float and Clear Properties</h1>
+
+    <div class="content">
+
+        <div class="box1">
+            Float Left
+        </div>
+
+        <div class="box2">
+            Float Right
+        </div>
+
+        <p>
+            The float property is used to position an element
+            to the left or right of its container. Text and other
+            content can flow around a floated element.
+        </p>
+
+        <!-- Clear prevents floating elements from affecting this element -->
+        <div class="clear">
+            Clear Property: This element appears below the floated boxes.
+        </div>
+
+    </div>
+
+</body>
+</html>

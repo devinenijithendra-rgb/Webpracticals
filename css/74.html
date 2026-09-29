@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News Blog</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 35px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #0066cc;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+        }
+
+        nav a:hover {
+            background-color: #004c99;
+        }
+
+        /* Main Grid Layout */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        /* Main News Section */
+        .main-content {
+            display: grid;
+            gap: 20px;
+        }
+
+        .article {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .article img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .article h2 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .article p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+        }
+
+        .read-more:hover {
+            background-color: #004c99;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: grid;
+            gap: 20px;
+            align-content: start;
+        }
+
+        .sidebar-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .sidebar-box h3 {
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-box ul {
+            list-style: none;
+        }
+
+        .sidebar-box li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sidebar-box li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-box a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .sidebar-box a:hover {
+            color: #0066cc;
+        }
+
+        /* Recent Posts Grid */
+        .recent-posts {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .recent-posts h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .post {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .post h3 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .post p {
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .post-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article img {
+                height: 200px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Daily News</h1>
+        <p>Your Source for Latest News and Stories</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">World</a>
+        <a href="#">Technology</a>
+        <a href="#">Sports</a>
+        <a href="#">Business</a>
+        <a href="#">Entertainment</a>
+    </nav>
+
+    <!-- Main Grid -->
+    <div class="container">
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <article class="article">
+                <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e"
+                     alt="News">
+
+                <h2>Latest News Around the World</h2>
+
+                <p>
+                    Stay updated with the latest events, important
+                    developments and interesting stories from around
+                    the world.
+                </p>
+
+                <a href="#" class="read-more">Read More</a>
+            </article>
+
+            <article class="article">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+                     alt="Technology">
+
+                <h2>Technology Trends in 2026</h2>
+
+                <p>
+                    Discover the latest technology trends, innovations,
+                    artificial intelligence and digital developments
+                    changing our everyday lives.
+                </p>
+
+                <a href="#" class="read-more">Read More</a>
+            </article>
+
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-box">
+                <h3>Popular Categories</h3>
+
+                <ul>
+                    <li><a href="#">World News</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-box">
+                <h3>Trending News</h3>
+
+                <ul>
+                    <li><a href="#">New Technology Announced</a></li>
+                    <li><a href="#">Major Sports Event</a></li>
+                    <li><a href="#">Business Updates</a></li>
+                    <li><a href="#">Top Entertainment Stories</a></li>
+                </ul>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- Recent Posts -->
+    <section class="recent-posts">
+
+        <h2>Recent Posts</h2>
+
+        <div class="post-grid">
+
+            <div class="post">
+                <h3>Future of Artificial Intelligence</h3>
+                <p>
+                    Learn how artificial intelligence is transforming
+                    different industries.
+                </p>
+            </div>
+
+            <div class="post">
+                <h3>Top Travel Destinations</h3>
+                <p>
+                    Explore some of the most interesting destinations
+                    for your next trip.
+                </p>
+            </div>
+
+            <div class="post">
+                <h3>Healthy Lifestyle Tips</h3>
+                <p>
+                    Simple tips for maintaining a healthy and active
+                    lifestyle.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Daily News. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

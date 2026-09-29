@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS Display Properties</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+    }
+
+    .section {
+        background-color: white;
+        margin: 25px auto;
+        padding: 20px;
+        width: 80%;
+        border: 2px solid black;
+    }
+
+    /* 1. Block */
+    .block {
+        display: block;
+        background-color: lightblue;
+        padding: 15px;
+        margin: 5px;
+    }
+
+    /* 2. Inline */
+    .inline {
+        display: inline;
+        background-color: lightgreen;
+        padding: 10px;
+    }
+
+    /* 3. Inline-Block */
+    .inline-block {
+        display: inline-block;
+        background-color: orange;
+        width: 150px;
+        height: 80px;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    /* 4. None */
+    .none {
+        display: none;
+        background-color: red;
+        color: white;
+        padding: 15px;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS Display Properties</h1>
+
+<!-- Block -->
+<div class="section">
+    <h2>1. Display: Block</h2>
+
+    <div class="block">Block Element 1</div>
+    <div class="block">Block Element 2</div>
+</div>
+
+<!-- Inline -->
+<div class="section">
+    <h2>2. Display: Inline</h2>
+
+    <span class="inline">Inline Element 1</span>
+    <span class="inline">Inline Element 2</span>
+    <span class="inline">Inline Element 3</span>
+</div>
+
+<!-- Inline-Block -->
+<div class="section">
+    <h2>3. Display: Inline-Block</h2>
+
+    <div class="inline-block">
+        Box 1
+    </div>
+
+    <div class="inline-block">
+        Box 2
+    </div>
+
+    <div class="inline-block">
+        Box 3
+    </div>
+</div>
+
+<!-- None -->
+<div class="section">
+    <h2>4. Display: None</h2>
+
+    <p>
+        The following element is hidden using
+        <b>display: none</b>.
+    </p>
+
+    <div class="none">
+        This content is hidden.
+    </div>
+
+    <p>
+        The hidden box does not occupy any space on the page.
+    </p>
+</div>
+```
+
+</body>
+</html>

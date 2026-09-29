@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        #heading {
+            color: blue;
+            font-size: 32px;
+        }
+
+        .para {
+            color: green;
+            font-size: 20px;
+        }
+
+        h2, h3 {
+            color: purple;
+        }
+
+        div p {
+            color: red;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 8px;
+        }
+
+        button:hover {
+            background-color: yellow;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">CSS Selectors Demonstration</h1>
+
+    <h2>Different CSS Selectors</h2>
+
+    <p class="para">This paragraph uses a Class Selector.</p>
+
+    <div>
+        <p>This paragraph uses a Descendant Selector.</p>
+    </div>
+
+    <h3>Grouping Selector Example</h3>
+
+    <input type="text" placeholder="Enter your name">
+
+    <br><br>
+
+    <button>Submit</button>
+
+</body>
+</html>

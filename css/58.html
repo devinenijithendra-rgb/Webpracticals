@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS Filters</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        margin: 0 0 30px 0;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .card {
+        background-color: white;
+        width: 250px;
+        padding: 15px;
+        border: 2px solid #333;
+        border-radius: 10px;
+    }
+
+    .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* Blur Filter */
+    .blur img {
+        filter: blur(5px);
+    }
+
+    /* Grayscale Filter */
+    .grayscale img {
+        filter: grayscale(100%);
+    }
+
+    /* Brightness Filter */
+    .brightness img {
+        filter: brightness(150%);
+    }
+
+    /* Contrast Filter */
+    .contrast img {
+        filter: contrast(200%);
+    }
+
+    /* Hover Effect */
+    .card img {
+        transition: filter 0.5s;
+    }
+
+    .card img:hover {
+        filter: none;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS Filter Effects</h1>
+
+<div class="gallery">
+
+    <!-- Blur -->
+    <div class="card blur">
+        <h2>Blur</h2>
+        <img src="https://picsum.photos/id/1015/400/300"
+             alt="Nature">
+        <p>filter: blur(5px)</p>
+    </div>
+
+    <!-- Grayscale -->
+    <div class="card grayscale">
+        <h2>Grayscale</h2>
+        <img src="https://picsum.photos/id/1025/400/300"
+             alt="Animal">
+        <p>filter: grayscale(100%)</p>
+    </div>
+
+    <!-- Brightness -->
+    <div class="card brightness">
+        <h2>Brightness</h2>
+        <img src="https://picsum.photos/id/1035/400/300"
+             alt="Landscape">
+        <p>filter: brightness(150%)</p>
+    </div>
+
+    <!-- Contrast -->
+    <div class="card contrast">
+        <h2>Contrast</h2>
+        <img src="https://picsum.photos/id/1040/400/300"
+             alt="Nature">
+        <p>filter: contrast(200%)</p>
+    </div>
+
+</div>
+```
+
+</body>
+</html>

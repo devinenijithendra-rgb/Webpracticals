@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Object Fit and Object Position</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        margin: 0 0 30px 0;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .card {
+        width: 280px;
+        background-color: white;
+        padding: 15px;
+        border: 2px solid #333;
+        border-radius: 10px;
+    }
+
+    .card img {
+        width: 250px;
+        height: 180px;
+        border: 2px solid #555;
+    }
+
+    /* Object-fit: cover */
+    .cover img {
+        object-fit: cover;
+    }
+
+    /* Object-fit: contain */
+    .contain img {
+        object-fit: contain;
+        background-color: lightgray;
+    }
+
+    /* Object-fit: fill */
+    .fill img {
+        object-fit: fill;
+    }
+
+    /* Object-fit: none */
+    .none img {
+        object-fit: none;
+    }
+
+    /* Object-position */
+    .position img {
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .position-center img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .position-bottom img {
+        object-fit: cover;
+        object-position: bottom;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS Object-Fit and Object-Position</h1>
+
+<div class="gallery">
+
+    <!-- Object Fit: Cover -->
+    <div class="card cover">
+        <h2>Object-Fit: Cover</h2>
+        <img src="https://picsum.photos/id/1015/500/300"
+             alt="Nature">
+        <p>Fills the box and crops the image.</p>
+    </div>
+
+    <!-- Object Fit: Contain -->
+    <div class="card contain">
+        <h2>Object-Fit: Contain</h2>
+        <img src="https://picsum.photos/id/1025/500/300"
+             alt="Animal">
+        <p>Shows the complete image inside the box.</p>
+    </div>
+
+    <!-- Object Fit: Fill -->
+    <div class="card fill">
+        <h2>Object-Fit: Fill</h2>
+        <img src="https://picsum.photos/id/1035/500/300"
+             alt="Landscape">
+        <p>Stretches the image to fill the box.</p>
+    </div>
+
+    <!-- Object Fit: None -->
+    <div class="card none">
+        <h2>Object-Fit: None</h2>
+        <img src="https://picsum.photos/id/1040/500/300"
+             alt="Nature">
+        <p>Displays the image at its original size.</p>
+    </div>
+
+    <!-- Object Position: Top -->
+    <div class="card position">
+        <h2>Position: Top</h2>
+        <img src="https://picsum.photos/id/1016/500/300"
+             alt="Mountain">
+        <p>Image is positioned at the top.</p>
+    </div>
+
+    <!-- Object Position: Center -->
+    <div class="card position-center">
+        <h2>Position: Center</h2>
+        <img src="https://picsum.photos/id/1018/500/300"
+             alt="Nature">
+        <p>Image is positioned at the center.</p>
+    </div>
+
+    <!-- Object Position: Bottom -->
+    <div class="card position-bottom">
+        <h2>Position: Bottom</h2>
+        <img src="https://picsum.photos/id/1020/500/300"
+             alt="Nature">
+        <p>Image is positioned at the bottom.</p>
+    </div>
+
+</div>
+```
+
+</body>
+</html>

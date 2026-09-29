@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Restaurant</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: white;
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff9800;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 450px;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.55),
+                rgba(0, 0, 0, 0.55)),
+                url("https://picsum.photos/id/292/1600/800");
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #e68900;
+        }
+
+        /* Common Section */
+        section {
+            padding: 50px 5%;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+            color: #222;
+        }
+
+        /* About */
+        .about {
+            background-color: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Menu */
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .menu-card {
+            width: 280px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .menu-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu-content h3 {
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .price {
+            display: block;
+            margin-top: 12px;
+            color: #e67e00;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: white;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 8px 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .hero {
+                height: 380px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-card {
+                width: 90%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Delicious Restaurant</div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Welcome to Delicious</h1>
+            <p>Fresh Food • Great Taste • Happy Moments</p>
+            <a href="#menu" class="btn">View Our Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+
+        <p>
+            Delicious Restaurant offers fresh and tasty food prepared
+            with quality ingredients. Our goal is to provide delicious
+            meals and a comfortable dining experience for every guest.
+        </p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+
+        <div class="menu">
+
+            <div class="menu-card">
+                <img src="https://picsum.photos/id/488/600/400"
+                     alt="Pizza">
+
+                <div class="menu-content">
+                    <h3>Cheese Pizza</h3>
+                    <p>Fresh pizza topped with cheese and vegetables.</p>
+                    <span class="price">₹299</span>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://picsum.photos/id/292/600/400"
+                     alt="Burger">
+
+                <div class="menu-content">
+                    <h3>Classic Burger</h3>
+                    <p>Juicy burger served with fresh vegetables.</p>
+                    <span class="price">₹199</span>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://picsum.photos/id/1080/600/400"
+                     alt="Pasta">
+
+                <div class="menu-content">
+                    <h3>Creamy Pasta</h3>
+                    <p>Delicious pasta prepared with creamy sauce.</p>
+                    <span class="price">₹249</span>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://picsum.photos/id/108/600/400"
+                     alt="Dessert">
+
+                <div class="menu-content">
+                    <h3>Special Dessert</h3>
+                    <p>A sweet and delicious dessert to finish your meal.</p>
+                    <span class="price">₹149</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+
+        <p><strong>Address:</strong> Main Road, Chennai, India</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> info@deliciousrestaurant.com</p>
+
+        <br>
+
+        <a href="#" class="btn">Book a Table</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Delicious Restaurant. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

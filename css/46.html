@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS Gradients</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+    }
+
+    h1 {
+        text-align: center;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    /* Linear Gradient */
+    .linear {
+        height: 200px;
+        background: linear-gradient(to right, blue, purple);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+
+    /* Linear Gradient - Diagonal */
+    .linear-diagonal {
+        height: 200px;
+        background: linear-gradient(45deg, orange, red, yellow);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+
+    /* Radial Gradient */
+    .radial {
+        height: 250px;
+        background: radial-gradient(circle, yellow, orange, red);
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+
+    /* Radial Gradient with Multiple Colors */
+    .radial-multiple {
+        height: 250px;
+        background: radial-gradient(
+            circle,
+            white,
+            lightblue,
+            blue,
+            darkblue
+        );
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS Linear and Radial Gradients</h1>
+
+<div class="container">
+
+    <div class="linear">
+        Linear Gradient - Horizontal
+    </div>
+
+    <div class="linear-diagonal">
+        Linear Gradient - Diagonal
+    </div>
+
+    <div class="radial">
+        Radial Gradient - Circle
+    </div>
+
+    <div class="radial-multiple">
+        Radial Gradient - Multiple Colors
+    </div>
+
+</div>
+```
+
+</body>
+</html>

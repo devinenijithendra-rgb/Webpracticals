@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        /* Button Transition */
+        .btn {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+
+            transition: background-color 0.5s, transform 0.5s;
+        }
+
+        .btn:hover {
+            background-color: #28a745;
+            transform: scale(1.1);
+        }
+
+        /* Box Transition */
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            margin: 50px auto;
+
+            transition: width 1s, height 1s, background-color 1s;
+        }
+
+        .box:hover {
+            width: 250px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        /* Card Transition */
+        .card {
+            width: 250px;
+            padding: 25px;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px gray;
+
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px gray;
+        }
+
+        /* Text Transition */
+        .text {
+            font-size: 22px;
+            color: #333;
+
+            transition: color 0.5s, letter-spacing 0.5s;
+        }
+
+        .text:hover {
+            color: red;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Transitions Demonstration</h1>
+
+    <button class="btn">Hover Over Me</button>
+
+    <div class="box"></div>
+
+    <div class="card">
+        <h2>Hover Card</h2>
+        <p>Move the mouse over this card to see the transition.</p>
+    </div>
+
+    <p class="text">Hover over this text</p>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+id="q5y2kd"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Fixed Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 220px;
+            height: 100%;
+            background-color: #222;
+            color: white;
+            padding: 25px 15px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Sidebar Links */
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 220px;
+            padding: 30px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            min-height: 300px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .section h1,
+        .section h2 {
+            color: #333;
+        }
+
+        .section p {
+            line-height: 1.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .sidebar h2 {
+                margin-bottom: 10px;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                padding: 10px;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed Sidebar -->
+    <aside class="sidebar">
+        <h2>My Website</h2>
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <section class="section" id="home">
+            <h1>Home</h1>
+            <p>
+                Welcome to my website. This webpage demonstrates
+                how to create a fixed sidebar using CSS.
+            </p>
+            <p>
+                The sidebar remains visible while the page content
+                is scrolled.
+            </p>
+        </section>
+
+        <section class="section" id="about">
+            <h2>About Us</h2>
+            <p>
+                We provide web development tutorials for students
+                and beginners.
+            </p>
+            <p>
+                Learn HTML, CSS, JavaScript, Flexbox and CSS Grid
+                through simple examples.
+            </p>
+        </section>
+
+        <section class="section" id="services">
+            <h2>Our Services</h2>
+            <p>
+                We create responsive websites and modern user
+                interfaces using HTML and CSS.
+            </p>
+            <p>
+                Our designs work on desktops, tablets and mobile
+                devices.
+            </p>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: example@email.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Address: Chennai, India</p>
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Pseudo-Classes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* :hover */
+        button:hover {
+            background-color: green;
+            color: white;
+        }
+
+        /* :active */
+        button:active {
+            background-color: red;
+            color: white;
+        }
+
+        /* :focus */
+        input:focus {
+            border: 3px solid blue;
+            background-color: lightyellow;
+            outline: none;
+        }
+
+        /* :visited */
+        a:visited {
+            color: purple;
+        }
+
+        /* Normal link */
+        a {
+            color: blue;
+            font-size: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            margin: 15px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Pseudo-Classes Demonstration</h1>
+
+    <h2>:hover and :active</h2>
+
+    <button>Move Mouse Over Me</button>
+
+    <h2>:focus</h2>
+
+    <input type="text" placeholder="Click here and type">
+
+    <h2>:visited</h2>
+
+    <p>
+        <a href="https://www.google.com" target="_blank">
+            Visit Google
+        </a>
+    </p>
+
+</body>
+</html>

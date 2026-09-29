@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Two-column Grid */
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Main Content */
+        .main-content {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .main-content h2 {
+            margin-top: 0;
+        }
+
+        .main-content p {
+            line-height: 1.6;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            padding-left: 20px;
+        }
+
+        .sidebar li {
+            margin-bottom: 12px;
+        }
+
+        .sidebar a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 700px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Webpage</h1>
+        <p>Two-Column Layout Using CSS Grid</p>
+    </header>
+
+    <!-- Main Grid Container -->
+    <div class="container">
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2>About CSS Grid</h2>
+
+            <p>
+                CSS Grid is a powerful layout system used to create
+                rows and columns on a webpage.
+            </p>
+
+            <p>
+                It makes it easy to design responsive layouts.
+                In this example, the main content occupies two parts
+                while the sidebar occupies one part.
+            </p>
+
+            <h2>Benefits of CSS Grid</h2>
+
+            <p>
+                CSS Grid provides control over rows, columns, spacing,
+                alignment and responsive webpage layouts.
+            </p>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Quick Links</h2>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <h2>Latest News</h2>
+            <p>New CSS Grid tutorial available.</p>
+            <p>Learn responsive web design.</p>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Webpage. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Z-Index and Stacking Order</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        text-align: center;
+        margin: 0;
+        padding: 30px;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    .container {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        margin: 40px auto;
+        border: 3px solid black;
+        background-color: white;
+    }
+
+    /* Box 1 */
+    .box1 {
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        background-color: red;
+        top: 50px;
+        left: 100px;
+        z-index: 1;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Box 2 */
+    .box2 {
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        background-color: blue;
+        top: 100px;
+        left: 200px;
+        z-index: 2;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Box 3 */
+    .box3 {
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        background-color: green;
+        top: 150px;
+        left: 150px;
+        z-index: 3;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Box 4 */
+    .box4 {
+        position: absolute;
+        width: 150px;
+        height: 100px;
+        background-color: orange;
+        top: 20px;
+        right: 20px;
+        z-index: 5;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .info {
+        width: 600px;
+        margin: 20px auto;
+        background-color: white;
+        padding: 20px;
+        border: 2px solid #333;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>Z-Index and Stacking Order</h1>
+
+<div class="container">
+
+    <div class="box1">
+        Box 1<br>
+        z-index: 1
+    </div>
+
+    <div class="box2">
+        Box 2<br>
+        z-index: 2
+    </div>
+
+    <div class="box3">
+        Box 3<br>
+        z-index: 3
+    </div>
+
+    <div class="box4">
+        Box 4<br>
+        z-index: 5
+    </div>
+
+</div>
+
+<div class="info">
+    <h2>How z-index Works</h2>
+
+    <p>
+        The z-index property controls the stacking order
+        of positioned elements.
+    </p>
+
+    <p>
+        A higher z-index value places an element in front
+        of an element with a lower z-index value.
+    </p>
+
+    <p>
+        In this example, Box 4 has the highest z-index,
+        so it appears above the other boxes.
+    </p>
+</div>
+```
+
+</body>
+</html>

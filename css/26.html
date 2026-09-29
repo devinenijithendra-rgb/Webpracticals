@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Pseudo-Elements</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+
+        /* ::before */
+        .before::before {
+            content: "★ ";
+            color: red;
+        }
+
+        /* ::after */
+        .after::after {
+            content: " ✔";
+            color: green;
+        }
+
+        /* ::first-letter */
+        .first-letter::first-letter {
+            color: red;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        /* ::first-line */
+        .first-line::first-line {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Pseudo-Elements Demonstration</h1>
+
+    <div class="box">
+        <h2 class="before">Before Element</h2>
+        <p>
+            The ::before pseudo-element adds content before an HTML element.
+        </p>
+    </div>
+
+    <div class="box">
+        <h2 class="after">After Element</h2>
+        <p>
+            The ::after pseudo-element adds content after an HTML element.
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>::first-letter</h2>
+        <p class="first-letter">
+            This paragraph demonstrates the first-letter pseudo-element.
+            The first letter is styled differently from the remaining text.
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>::first-line</h2>
+        <p class="first-line">
+            This is the first line of the paragraph and it is styled differently.
+            The remaining lines have the normal style of the paragraph.
+        </p>
+    </div>
+
+</body>
+</html>

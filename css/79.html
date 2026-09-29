@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mobile First Website</title>
+
+    <style>
+        /* =========================
+           BASIC RESET
+        ========================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HEADER - MOBILE FIRST
+        ========================= */
+        header {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+        nav {
+            background-color: #2874a6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            width: 100%;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #1e3a5f;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+        .hero {
+            background-color: #5dade2;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #e68900;
+        }
+
+        /* =========================
+           CONTENT
+        ========================= */
+        .content {
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .content h2 {
+            text-align: center;
+            color: #1e3a5f;
+            margin-bottom: 25px;
+        }
+
+        /* Mobile: one column */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: #2874a6;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* =========================
+           TABLET
+           Minimum width: 600px
+        ========================= */
+        @media (min-width: 600px) {
+
+            nav {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            nav a {
+                width: auto;
+                padding: 15px 20px;
+            }
+
+            .hero h2 {
+                font-size: 40px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* =========================
+           DESKTOP
+           Minimum width: 900px
+        ========================= */
+        @media (min-width: 900px) {
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 60px;
+            }
+
+            header h1 {
+                margin-bottom: 0;
+            }
+
+            .hero {
+                padding: 80px 20px;
+            }
+
+            .hero h2 {
+                font-size: 50px;
+            }
+
+            .hero p {
+                font-size: 20px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .content {
+                max-width: 1200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Website</h1>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <h2>Welcome to My Website</h2>
+
+        <p>
+            A simple mobile-first responsive webpage
+            using HTML and CSS.
+        </p>
+
+        <a href="#" class="btn">Learn More</a>
+
+    </section>
+
+
+    <!-- Content Section -->
+    <section class="content">
+
+        <h2>Our Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Web Design</h3>
+                <p>
+                    Create attractive and user-friendly
+                    websites using HTML and CSS.
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="card">
+                <h3>Responsive Design</h3>
+                <p>
+                    Build websites that work properly
+                    on mobiles, tablets and desktops.
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>
+                    Develop modern websites with clean
+                    and organized code.
+                </p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Website. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

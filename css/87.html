@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Typography</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            /*
+                Minimum: 2rem
+                Flexible: 6vw
+                Maximum: 4rem
+            */
+            font-size: clamp(2rem, 6vw, 4rem);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+        }
+
+        /* Main Content */
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .content {
+            background-color: white;
+            padding: clamp(20px, 5vw, 50px);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #aaa;
+        }
+
+        .content h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 15px;
+            color: #1e3a5f;
+        }
+
+        .content p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            margin-bottom: 20px;
+        }
+
+        .content li {
+            font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+            margin-bottom: 10px;
+        }
+
+        /* Quote */
+        .quote {
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 5px solid #1e3a5f;
+            background-color: #eef5fb;
+            font-size: clamp(1.1rem, 3vw, 1.7rem);
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #1e3a5f;
+            color: white;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            main {
+                width: 92%;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            header {
+                padding: 25px 15px;
+            }
+
+            main {
+                width: 94%;
+                margin: 25px auto;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Typography</h1>
+        <p>Text that automatically adjusts to different screen sizes</p>
+    </header>
+
+    <main>
+
+        <section class="content">
+
+            <h2>What is Responsive Typography?</h2>
+
+            <p>
+                Responsive typography means creating text that adjusts
+                its size and appearance according to the screen size.
+                It helps make websites easier to read on desktops,
+                tablets, and mobile devices.
+            </p>
+
+            <h2>Benefits</h2>
+
+            <ul>
+                <li>Improves readability on different devices.</li>
+                <li>Creates a better user experience.</li>
+                <li>Reduces the need for manual font-size changes.</li>
+                <li>Makes websites more responsive.</li>
+            </ul>
+
+            <div class="quote">
+                "Good typography makes a website easier and more
+                comfortable to read."
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Responsive Typography</p>
+    </footer>
+
+</body>
+</html>

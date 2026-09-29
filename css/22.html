@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Positioning</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            margin: 0;
+            padding-bottom: 500px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Static Position */
+        .static {
+            position: static;
+            background-color: lightblue;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        /* Relative Position */
+        .relative {
+            position: relative;
+            left: 50px;
+            background-color: lightgreen;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        /* Parent for Absolute Position */
+        .parent {
+            position: relative;
+            height: 180px;
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        /* Absolute Position */
+        .absolute {
+            position: absolute;
+            right: 20px;
+            top: 60px;
+            background-color: orange;
+            padding: 20px;
+        }
+
+        /* Fixed Position */
+        .fixed {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: red;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        /* Sticky Position */
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: purple;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Positioning Demonstration</h1>
+
+    <!-- Sticky Position -->
+    <div class="sticky">
+        Sticky Position
+    </div>
+
+    <!-- Static Position -->
+    <div class="static">
+        <h3>Static Position</h3>
+        This is the default position of an element.
+    </div>
+
+    <!-- Relative Position -->
+    <div class="relative">
+        <h3>Relative Position</h3>
+        This element is moved 50px to the right from its normal position.
+    </div>
+
+    <!-- Absolute Position -->
+    <div class="parent">
+        <h3>Absolute Position</h3>
+
+        <div class="absolute">
+            Absolute Element
+        </div>
+    </div>
+
+    <!-- Fixed Position -->
+    <div class="fixed">
+        Fixed Position
+    </div>
+
+    <div class="content">
+        <h2>Scroll Down</h2>
+
+        <p>
+            This page demonstrates different CSS positioning properties.
+            Scroll down to see how sticky and fixed positioning work.
+        </p>
+
+        <p>
+            Static elements remain in the normal document flow.
+            Relative elements can be moved relative to their normal position.
+        </p>
+
+        <p>
+            Absolute elements are positioned relative to their nearest
+            positioned parent.
+        </p>
+
+        <p>
+            Fixed elements remain in the same position on the screen
+            even when the page is scrolled.
+        </p>
+
+        <p>
+            Sticky elements behave like normal elements until a specified
+            position is reached, after which they remain fixed while scrolling.
+        </p>
+
+        <p>
+            CSS positioning is useful for creating navigation bars,
+            overlays, floating buttons, and other webpage layouts.
+        </p>
+    </div>
+
+</body>
+</html>

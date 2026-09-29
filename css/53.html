@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS Visibility and Hiding Elements</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 30px auto;
+        background-color: white;
+        padding: 20px;
+        border: 2px solid black;
+    }
+
+    .box {
+        width: 250px;
+        padding: 20px;
+        margin: 20px auto;
+        background-color: lightblue;
+        border: 2px solid blue;
+    }
+
+    /* Visible Element */
+    .visible {
+        visibility: visible;
+    }
+
+    /* Hidden Element */
+    .hidden {
+        visibility: hidden;
+    }
+
+    /* Display None */
+    .none {
+        display: none;
+    }
+
+    /* Opacity Zero */
+    .transparent {
+        opacity: 0;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS Visibility and Hiding Elements</h1>
+
+<div class="container">
+
+    <h2>1. Visibility: Visible</h2>
+
+    <div class="box visible">
+        This element is visible.
+    </div>
+
+    <h2>2. Visibility: Hidden</h2>
+
+    <div class="box hidden">
+        This element is hidden.
+    </div>
+
+    <p>
+        The hidden element still occupies space on the page.
+    </p>
+
+    <h2>3. Display: None</h2>
+
+    <div class="box none">
+        This element is completely hidden.
+    </div>
+
+    <p>
+        The display:none element does not occupy any space.
+    </p>
+
+    <h2>4. Opacity: 0</h2>
+
+    <div class="box transparent">
+        This element is transparent.
+    </div>
+
+    <p>
+        The element is still present and occupies space,
+        but it cannot be seen.
+    </p>
+
+</div>
+```
+
+</body>
+</html>

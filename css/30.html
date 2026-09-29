@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Layout</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Grid Container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        /* Grid Items */
+        .box {
+            background-color: white;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .box:hover {
+            background-color: #ddd;
+        }
+
+        /* Header */
+        .header {
+            grid-column: 1 / 4;
+            background-color: #333;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        /* Footer */
+        .footer {
+            grid-column: 1 / 4;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive Grid */
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .header,
+            .footer {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Grid Layout Example</h1>
+
+    <div class="grid-container">
+
+        <div class="header">
+            My Webpage
+        </div>
+
+        <div class="box">
+            Home
+        </div>
+
+        <div class="box">
+            About
+        </div>
+
+        <div class="box">
+            Services
+        </div>
+
+        <div class="box">
+            Gallery
+        </div>
+
+        <div class="box">
+            Contact
+        </div>
+
+        <div class="box">
+            Blog
+        </div>
+
+        <div class="footer">
+            © 2026 My Webpage
+        </div>
+
+    </div>
+
+</body>
+</html>

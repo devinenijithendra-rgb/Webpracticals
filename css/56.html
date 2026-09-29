@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS Tooltip</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 50px;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    /* Tooltip Container */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        margin-top: 50px;
+    }
+
+    /* Button */
+    .tooltip-button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .tooltip-button:hover {
+        background-color: #2980b9;
+    }
+
+    /* Tooltip Text */
+    .tooltip-text {
+        visibility: hidden;
+        width: 180px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border-radius: 6px;
+
+        position: absolute;
+        bottom: 130%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    /* Small Arrow */
+    .tooltip-text::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+
+        border-width: 5px;
+        border-style: solid;
+        border-color: #333 transparent transparent transparent;
+    }
+
+    /* Show Tooltip on Hover */
+    .tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS Tooltip Example</h1>
+
+<div class="tooltip">
+
+    <button class="tooltip-button">
+        Hover Me
+    </button>
+
+    <span class="tooltip-text">
+        This is a CSS tooltip!
+    </span>
+
+</div>
+```
+
+</body>
+</html>

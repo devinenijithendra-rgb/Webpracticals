@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS Combinator Selectors</title>
+
+```
+<style>
+
+    /* 1. Descendant Selector (space)
+       Selects all <p> elements inside .container */
+    .container p {
+        color: blue;
+    }
+
+    /* 2. Child Selector (>)
+       Selects only direct child <p> elements */
+    .parent > p {
+        background-color: lightyellow;
+        padding: 10px;
+    }
+
+    /* 3. Adjacent Sibling Selector (+)
+       Selects the <p> immediately after an <h2> */
+    h2 + p {
+        color: green;
+        font-weight: bold;
+    }
+
+    /* 4. General Sibling Selector (~)
+       Selects all <p> elements that are siblings of an <h3> */
+    h3 ~ p {
+        background-color: lightblue;
+        padding: 8px;
+    }
+
+    .box {
+        border: 2px solid black;
+        padding: 20px;
+        margin: 20px auto;
+        width: 70%;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="box container">
+
+    <h1>CSS Combinator Selectors</h1>
+
+    <!-- Descendant Selector -->
+    <h2>1. Descendant Selector</h2>
+
+    <div>
+        <p>This paragraph is inside the container.</p>
+
+        <div>
+            <p>This paragraph is deeply nested inside the container.</p>
+        </div>
+    </div>
+
+    <!-- Child Selector -->
+    <h2>2. Child Selector</h2>
+
+    <div class="parent">
+
+        <p>This is a direct child of the parent.</p>
+
+        <div>
+            <p>This is NOT a direct child of the parent.</p>
+        </div>
+
+    </div>
+
+    <!-- Adjacent Sibling Selector -->
+    <h2>3. Adjacent Sibling Selector</h2>
+
+    <p>This paragraph comes immediately after the h2.</p>
+
+    <p>This paragraph is not immediately after the h2.</p>
+
+    <!-- General Sibling Selector -->
+    <h3>4. General Sibling Selector</h3>
+
+    <p>This paragraph is a sibling of h3.</p>
+
+    <p>This is another sibling of h3.</p>
+
+    <div>
+        This div is also a sibling.
+    </div>
+
+</div>
+```
+
+</body>
+</html>

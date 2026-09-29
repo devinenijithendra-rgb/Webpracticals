@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS Overflow Properties</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .box {
+        width: 250px;
+        height: 120px;
+        background-color: white;
+        border: 3px solid black;
+        padding: 15px;
+    }
+
+    /* 1. Overflow Visible */
+    .visible {
+        overflow: visible;
+    }
+
+    /* 2. Overflow Hidden */
+    .hidden {
+        overflow: hidden;
+    }
+
+    /* 3. Overflow Scroll */
+    .scroll {
+        overflow: scroll;
+    }
+
+    /* 4. Overflow Auto */
+    .auto {
+        overflow: auto;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS Overflow Properties</h1>
+
+<div class="container">
+
+    <div>
+        <h2>Visible</h2>
+        <div class="box visible">
+            This is an example of overflow: visible.
+            The content that exceeds the size of the box
+            will remain visible outside the box.
+        </div>
+    </div>
+
+    <div>
+        <h2>Hidden</h2>
+        <div class="box hidden">
+            This is an example of overflow: hidden.
+            Any content that exceeds the size of the box
+            will be clipped and will not be displayed.
+        </div>
+    </div>
+
+    <div>
+        <h2>Scroll</h2>
+        <div class="box scroll">
+            This is an example of overflow: scroll.
+            Scrollbars are displayed so that the user
+            can view the content that does not fit inside
+            the box.
+        </div>
+    </div>
+
+    <div>
+        <h2>Auto</h2>
+        <div class="box auto">
+            This is an example of overflow: auto.
+            Scrollbars appear only when the content
+            exceeds the available space.
+        </div>
+    </div>
+
+</div>
+```
+
+</body>
+</html>

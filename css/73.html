@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel World</title>
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #006994;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 500px;
+            background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            color: white;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #e68900;
+        }
+
+        /* Destinations Section */
+        .destinations {
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .destinations h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .destination-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+            color: #006994;
+        }
+
+        .card-content p {
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #006994;
+            color: white;
+            text-align: center;
+            padding: 50px 30px;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .contact h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            nav a {
+                margin: 8px;
+                display: inline-block;
+            }
+
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .destination-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">Travel World</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Explore The World</h1>
+            <p>Discover beautiful places and create unforgettable memories.</p>
+            <a href="#destinations" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+
+    <!-- Destinations Section -->
+    <section class="destinations" id="destinations">
+
+        <h2>Popular Destinations</h2>
+
+        <div class="destination-container">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"
+                     alt="Paris">
+
+                <div class="card-content">
+                    <h3>Paris</h3>
+                    <p>
+                        Visit the beautiful city of Paris and experience
+                        its amazing architecture and culture.
+                    </p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be"
+                     alt="London">
+
+                <div class="card-content">
+                    <h3>London</h3>
+                    <p>
+                        Explore London's famous landmarks, museums,
+                        parks and historic attractions.
+                    </p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4"
+                     alt="Bali">
+
+                <div class="card-content">
+                    <h3>Bali</h3>
+                    <p>
+                        Enjoy beautiful beaches, nature, temples and
+                        peaceful surroundings in Bali.
+                    </p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            Travel World helps you discover amazing destinations around
+            the world. We provide travel information and help you plan
+            memorable trips with your family and friends.
+        </p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: travelworld@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+
+        <a href="mailto:travelworld@example.com" class="btn">
+            Contact Now
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Travel World. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

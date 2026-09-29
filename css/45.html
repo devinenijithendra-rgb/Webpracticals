@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Background Images and Positioning</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: lightgray;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        background-color: #333;
+        padding: 20px;
+        margin: 0;
+    }
+
+    /* Section 1 - Center Position */
+    .center {
+        height: 300px;
+        margin: 20px;
+        background-image: url("image1.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    /* Section 2 - Top Left Position */
+    .top-left {
+        height: 300px;
+        margin: 20px;
+        background-image: url("image2.jpg");
+        background-position: top left;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    /* Section 3 - Bottom Right Position */
+    .bottom-right {
+        height: 300px;
+        margin: 20px;
+        background-image: url("image3.jpg");
+        background-position: bottom right;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    /* Section 4 - Multiple Background Images */
+    .multiple {
+        height: 300px;
+        margin: 20px;
+
+        background-image:
+            url("image4.jpg"),
+            url("image5.jpg");
+
+        background-position:
+            left top,
+            right bottom;
+
+        background-size:
+            50% 100%,
+            50% 100%;
+
+        background-repeat: no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS Background Images and Positioning</h1>
+
+<div class="center">
+    Background Position: Center
+</div>
+
+<div class="top-left">
+    Background Position: Top Left
+</div>
+
+<div class="bottom-right">
+    Background Position: Bottom Right
+</div>
+
+<div class="multiple">
+    Multiple Background Images
+</div>
+```
+
+</body>
+</html>

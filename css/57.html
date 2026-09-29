@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS Button Hover Animation</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        text-align: center;
+        padding: 80px;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 50px;
+    }
+
+    /* Button */
+    .animated-button {
+        position: relative;
+        padding: 15px 35px;
+        font-size: 18px;
+        color: white;
+        background-color: #3498db;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        overflow: hidden;
+
+        transition: background-color 0.4s,
+                    transform 0.3s,
+                    box-shadow 0.4s;
+    }
+
+    /* Hover Animation */
+    .animated-button:hover {
+        background-color: #8e44ad;
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Click Effect */
+    .animated-button:active {
+        transform: translateY(0);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Moving Shine Effect */
+    .animated-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        transform: skewX(-25deg);
+        transition: left 0.5s;
+    }
+
+    .animated-button:hover::before {
+        left: 150%;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS-Only Button Hover Animation</h1>
+
+<button class="animated-button">
+    Hover Me
+</button>
+```
+
+</body>
+</html>

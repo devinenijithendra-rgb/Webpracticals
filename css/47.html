@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Box Shadow and Text Shadow</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 30px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    /* Text Shadow */
+    .text-shadow {
+        text-align: center;
+        font-size: 40px;
+        color: #3498db;
+
+        /* horizontal offset, vertical offset, blur, color */
+        text-shadow: 4px 4px 5px gray;
+    }
+
+    /* Box Shadow */
+    .box {
+        width: 300px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: white;
+        text-align: center;
+        border-radius: 10px;
+
+        /* horizontal offset, vertical offset, blur, spread, color */
+        box-shadow: 5px 5px 15px gray;
+    }
+
+    /* Multiple Box Shadow */
+    .box2 {
+        width: 300px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: lightblue;
+        text-align: center;
+        border-radius: 10px;
+
+        box-shadow:
+            5px 5px 10px gray,
+            -5px -5px 10px lightgray;
+    }
+
+    /* Text with Multiple Shadow */
+    .heading {
+        text-align: center;
+        font-size: 35px;
+        color: purple;
+
+        text-shadow:
+            2px 2px 3px pink,
+            4px 4px 5px gray;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS Shadow Effects</h1>
+
+<!-- Text Shadow -->
+<div>
+    <h2 class="text-shadow">Text Shadow Example</h2>
+</div>
+
+<!-- Box Shadow -->
+<div class="box">
+    <h2>Box Shadow</h2>
+    <p>
+        This box uses the CSS box-shadow property.
+    </p>
+</div>
+
+<!-- Multiple Box Shadow -->
+<div class="box2">
+    <h2>Multiple Box Shadow</h2>
+    <p>
+        This box has more than one shadow.
+    </p>
+</div>
+
+<!-- Multiple Text Shadow -->
+<h2 class="heading">Multiple Text Shadows</h2>
+```
+
+</body>
+</html>

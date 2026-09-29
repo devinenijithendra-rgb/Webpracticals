@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Animations</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* Moving Box Animation */
+        .box {
+            width: 120px;
+            height: 120px;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+
+            animation-name: moveBox;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes moveBox {
+            from {
+                transform: translateX(-150px);
+            }
+
+            to {
+                transform: translateX(150px);
+            }
+        }
+
+        /* Rotating Circle Animation */
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #555;
+            border-radius: 50%;
+            margin: 50px auto;
+
+            animation: rotateCircle 2s linear infinite;
+        }
+
+        @keyframes rotateCircle {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Text Animation */
+        .text {
+            font-size: 25px;
+            font-weight: bold;
+            animation: fadeText 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeText {
+            from {
+                opacity: 0.2;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Button Animation */
+        button {
+            padding: 12px 25px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+
+            animation: buttonAnimation 1.5s infinite alternate;
+        }
+
+        @keyframes buttonAnimation {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.15);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Animations</h1>
+
+    <div class="box">
+        Moving Box
+    </div>
+
+    <div class="circle"></div>
+
+    <p class="text">
+        This text is animated
+    </p>
+
+    <button>
+        Animated Button
+    </button>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Card Layout</title>
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Product Container */
+        .product-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        /* Product Card */
+        .product-card {
+            width: 250px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 0 10px #ccc;
+            transition: transform 0.3s;
+        }
+
+        /* Product Image */
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Product Title */
+        .product-card h2 {
+            color: #333;
+            font-size: 22px;
+        }
+
+        /* Product Description */
+        .product-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Product Price */
+        .price {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Buy Button */
+        .buy-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .buy-btn:hover {
+            background-color: #555;
+        }
+
+        /* Hover Effect */
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .product-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Products</h1>
+
+    <div class="product-container">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x180"
+                 alt="Laptop">
+
+            <h2>Laptop</h2>
+
+            <p>High-performance laptop for students and professionals.</p>
+
+            <div class="price">₹50,000</div>
+
+            <br>
+
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x180"
+                 alt="Headphones">
+
+            <h2>Headphones</h2>
+
+            <p>Comfortable headphones with excellent sound quality.</p>
+
+            <div class="price">₹2,000</div>
+
+            <br>
+
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x180"
+                 alt="Smartphone">
+
+            <h2>Smartphone</h2>
+
+            <p>Modern smartphone with a powerful processor and camera.</p>
+
+            <div class="price">₹25,000</div>
+
+            <br>
+
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transitions and Transformations</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        /* Common Box Style */
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #555;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            border-radius: 10px;
+
+            /* Transition */
+            transition: all 0.5s ease;
+        }
+
+        /* Scale Transformation */
+        .scale:hover {
+            transform: scale(1.3);
+        }
+
+        /* Rotate Transformation */
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        /* Move Transformation */
+        .translate:hover {
+            transform: translateY(-30px);
+        }
+
+        /* Skew Transformation */
+        .skew:hover {
+            transform: skew(20deg);
+        }
+
+        /* Multiple Transformations */
+        .multiple:hover {
+            transform: scale(1.2) rotate(20deg);
+        }
+
+        /* Button Transition */
+        button {
+            margin-top: 40px;
+            padding: 12px 25px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.5s, transform 0.5s;
+        }
+
+        button:hover {
+            background-color: #777;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Transitions and Transformations</h1>
+
+    <div class="container">
+
+        <div class="box scale">
+            Scale
+        </div>
+
+        <div class="box rotate">
+            Rotate
+        </div>
+
+        <div class="box translate">
+            Translate
+        </div>
+
+        <div class="box skew">
+            Skew
+        </div>
+
+        <div class="box multiple">
+            Multiple
+        </div>
+
+    </div>
+
+    <button>Hover Me</button>
+
+</body>
+</html>

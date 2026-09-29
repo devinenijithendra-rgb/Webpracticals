@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Webpage</title>
+
+    <style>
+        /* Basic Styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #555;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .box {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Tablet Screen */
+        @media screen and (max-width: 768px) {
+
+            .container {
+                flex-wrap: wrap;
+            }
+
+            .box {
+                flex: 1 1 45%;
+            }
+
+            nav a {
+                padding: 12px 15px;
+            }
+        }
+
+        /* Mobile Screen */
+        @media screen and (max-width: 480px) {
+
+            header {
+                padding: 20px 10px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                border-bottom: 1px solid #777;
+            }
+
+            .container {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .box {
+                width: 100%;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Webpage</h1>
+        <p>Using CSS Media Queries</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="box">
+            <h2>HTML</h2>
+            <p>HTML is used to create the structure of webpages.</p>
+        </div>
+
+        <div class="box">
+            <h2>CSS</h2>
+            <p>CSS is used to style and design webpages.</p>
+        </div>
+
+        <div class="box">
+            <h2>JavaScript</h2>
+            <p>JavaScript is used to add functionality to webpages.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Responsive Webpage</p>
+    </footer>
+
+</body>
+</html>

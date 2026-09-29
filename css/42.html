@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS Selectors Demonstration</title>
+
+```
+<style>
+
+    /* 1. Universal Selector */
+    * {
+        box-sizing: border-box;
+    }
+
+    /* 2. Element Selector */
+    p {
+        color: blue;
+        font-size: 18px;
+    }
+
+    /* 3. Class Selector */
+    .highlight {
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    /* 4. ID Selector */
+    #heading {
+        color: darkgreen;
+        text-align: center;
+    }
+
+    /* 5. Attribute Selector */
+    input[type="text"] {
+        border: 2px solid blue;
+        padding: 8px;
+    }
+
+    input[type="email"] {
+        border: 2px solid green;
+        padding: 8px;
+    }
+
+    /* 6. Grouping Selector */
+    h2, h3 {
+        color: purple;
+        font-family: Arial, sans-serif;
+    }
+
+    .box {
+        border: 2px solid black;
+        padding: 20px;
+        margin: 20px auto;
+        width: 70%;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="box">
+
+    <h1 id="heading">CSS Selectors</h1>
+
+    <h2>Element Selector</h2>
+    <p>This paragraph is styled using the element selector.</p>
+
+    <h2>Class Selector</h2>
+    <p class="highlight">
+        This paragraph is styled using the class selector.
+    </p>
+
+    <h2>ID Selector</h2>
+    <p id="unique">
+        The heading at the top uses an ID selector.
+    </p>
+
+    <h2>Attribute Selector</h2>
+
+    <form>
+        <label>Name:</label><br>
+        <input type="text" placeholder="Enter your name">
+        <br><br>
+
+        <label>Email:</label><br>
+        <input type="email" placeholder="Enter your email">
+    </form>
+
+    <h2>Grouping Selector</h2>
+    <h3>Both h2 and h3 use the same CSS rule.</h3>
+
+</div>
+```
+
+</body>
+</html>

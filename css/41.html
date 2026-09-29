@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS Inheritance and Specificity</title>
+
+```
+<style>
+    /* Inheritance */
+    body {
+        font-family: Arial, sans-serif;
+        color: darkblue;
+    }
+
+    .parent {
+        color: green;
+        font-size: 20px;
+    }
+
+    /* Specificity examples */
+    p {
+        color: blue;
+    }
+
+    .special {
+        color: orange;
+    }
+
+    #unique {
+        color: red;
+    }
+
+    /* Element + class selector */
+    p.special {
+        color: purple;
+    }
+
+    /* !important has highest priority */
+    .important {
+        color: brown !important;
+    }
+
+    .box {
+        border: 2px solid black;
+        padding: 15px;
+        margin: 20px;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS Inheritance and Specificity</h1>
+
+<div class="box parent">
+    <h2>Inheritance Example</h2>
+    <p>This paragraph inherits the font family from the body.</p>
+    <p>This paragraph inherits the color from the parent element.</p>
+</div>
+
+<div class="box">
+    <h2>Specificity Example</h2>
+
+    <p>This paragraph uses the element selector.</p>
+
+    <p class="special">
+        This paragraph uses a class selector and element + class specificity.
+    </p>
+
+    <p id="unique" class="special">
+        This paragraph uses an ID selector, which has higher specificity.
+    </p>
+
+    <p class="important">
+        This paragraph uses !important, which overrides normal declarations.
+    </p>
+</div>
+```
+
+</body>
+</html>

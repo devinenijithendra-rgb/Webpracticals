@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Website</title>
+
+    <style>
+        /* =========================
+           GENERAL STYLES
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Flexbox Navigation */
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero {
+            min-height: 90vh;
+            background: linear-gradient(
+                rgba(30, 58, 95, 0.8),
+                rgba(30, 58, 95, 0.8)
+            ),
+            url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 6vw, 70px);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: clamp(17px, 2vw, 22px);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ffd166;
+            color: #222;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        /* =========================
+           SECTION COMMON STYLES
+        ========================== */
+
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* =========================
+           SERVICES - CSS GRID
+        ========================== */
+
+        .services {
+            background-color: white;
+        }
+
+        .service-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .service-card {
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            text-align: center;
+
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* =========================
+           ABOUT SECTION - GRID
+        ========================== */
+
+        .about {
+            background-color: #eef5fb;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .about-text h2 {
+            font-size: 35px;
+            color: #1e3a5f;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* =========================
+           FEATURES - FLEXBOX
+        ========================== */
+
+        .features {
+            background-color: white;
+        }
+
+        .feature-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            flex: 1;
+            min-width: 200px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .feature h3 {
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           CONTACT FORM
+        ========================== */
+
+        .contact {
+            background-color: #eef5fb;
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #ccc;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1e3a5f;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #142840;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-box {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-box h3 {
+            margin-bottom: 15px;
+            color: #ffd166;
+        }
+
+        .footer-box p,
+        .footer-box a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .footer-box a {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #49627c;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+
+        /* =========================
+           TABLET
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-text {
+                text-align: center;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            header {
+                position: static;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-container {
+                flex-direction: column;
+            }
+
+            .feature {
+                width: 100%;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-content">
+
+            <div class="logo">
+                MyWebsite
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Welcome to My Website</h1>
+
+            <p>
+                A complete responsive website created using
+                HTML5, CSS3, Flexbox, Grid and Media Queries.
+            </p>
+
+            <a href="#services" class="btn">
+                Explore Services
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We provide modern web solutions.</p>
+            </div>
+
+            <div class="service-grid">
+
+                <div class="service-card">
+                    <div class="icon">💻</div>
+                    <h3>Web Design</h3>
+                    <p>
+                        Modern and responsive website designs
+                        for different devices.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Websites that work smoothly on
+                        mobile, tablet and desktop.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">⚡</div>
+                    <h3>Fast Performance</h3>
+                    <p>
+                        Optimized layouts with clean and
+                        efficient CSS.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🎨</div>
+                    <h3>UI Design</h3>
+                    <p>
+                        Attractive and user-friendly interfaces
+                        for web applications.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🔒</div>
+                    <h3>Security</h3>
+                    <p>
+                        Following basic best practices for
+                        secure web development.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🚀</div>
+                    <h3>Development</h3>
+                    <p>
+                        Building websites using modern
+                        HTML5 and CSS3 techniques.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+                    alt="Team working together">
+            </div>
+
+            <div class="about-text">
+
+                <h2>About Us</h2>
+
+                <p>
+                    We create responsive and user-friendly
+                    websites using modern web technologies.
+                </p>
+
+                <p>
+                    This webpage demonstrates HTML5 semantic
+                    elements, CSS3 styling, Flexbox, CSS Grid,
+                    and responsive media queries.
+                </p>
+
+                <p>
+                    The layout automatically adjusts according
+                    to the screen size.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Why Choose Us?</h2>
+                <p>Simple, responsive and modern.</p>
+            </div>
+
+            <div class="feature-container">
+
+                <div class="feature">
+                    <h3>Responsive</h3>
+                    <p>Works on all screen sizes.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Modern</h3>
+                    <p>Uses modern CSS techniques.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Flexible</h3>
+                    <p>Flexbox creates flexible layouts.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Organized</h3>
+                    <p>CSS Grid organizes content neatly.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Send us a message.</p>
+            </div>
+
+            <form class="contact-form">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        placeholder="Enter your message"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-box">
+                    <h3>MyWebsite</h3>
+                    <p>
+                        A responsive website using
+                        HTML5 and CSS3.
+                    </p>
+                </div>
+
+                <div class="footer-box">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-box">
+                    <h3>Contact</h3>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 MyWebsite. All Rights Reserved.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

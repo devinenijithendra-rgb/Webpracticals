@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS Opacity and Transparency</title>
+
+```
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: lightgray;
+        margin: 0;
+        text-align: center;
+    }
+
+    h1 {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .container {
+        padding: 40px;
+    }
+
+    /* Fully Opaque */
+    .opaque {
+        background-color: blue;
+        color: white;
+        padding: 30px;
+        margin: 20px auto;
+        width: 300px;
+    }
+
+    /* 75% Opacity */
+    .opacity75 {
+        background-color: red;
+        color: white;
+        padding: 30px;
+        margin: 20px auto;
+        width: 300px;
+        opacity: 0.75;
+    }
+
+    /* 50% Opacity */
+    .opacity50 {
+        background-color: green;
+        color: white;
+        padding: 30px;
+        margin: 20px auto;
+        width: 300px;
+        opacity: 0.5;
+    }
+
+    /* 25% Opacity */
+    .opacity25 {
+        background-color: purple;
+        color: white;
+        padding: 30px;
+        margin: 20px auto;
+        width: 300px;
+        opacity: 0.25;
+    }
+
+    /* RGBA Transparency */
+    .transparent {
+        background-color: rgba(255, 165, 0, 0.5);
+        color: black;
+        padding: 30px;
+        margin: 20px auto;
+        width: 300px;
+    }
+
+    /* Hover Opacity */
+    .hover {
+        background-color: darkblue;
+        color: white;
+        padding: 30px;
+        margin: 20px auto;
+        width: 300px;
+        opacity: 0.5;
+        transition: opacity 0.5s;
+    }
+
+    .hover:hover {
+        opacity: 1;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>CSS Opacity and Transparency</h1>
+
+<div class="container">
+
+    <div class="opaque">
+        100% Opaque
+    </div>
+
+    <div class="opacity75">
+        75% Opacity
+    </div>
+
+    <div class="opacity50">
+        50% Opacity
+    </div>
+
+    <div class="opacity25">
+        25% Opacity
+    </div>
+
+    <div class="transparent">
+        50% Transparent using RGBA
+    </div>
+
+    <div class="hover">
+        Hover over me
+    </div>
+
+</div>
+```
+
+</body>
+</html>

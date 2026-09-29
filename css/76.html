@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Grid Template Areas</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f2f2f2;
+        }
+
+        /* Main Grid Container */
+        .container {
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 80px 60px 1fr 70px;
+
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "sidebar main"
+                "footer footer";
+
+            gap: 5px;
+        }
+
+        /* Header */
+        header {
+            grid-area: header;
+            background-color: #1e3a5f;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 30px;
+        }
+
+        /* Navigation */
+        nav {
+            grid-area: nav;
+            background-color: #2874a6;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background-color: white;
+            padding: 25px;
+        }
+
+        .sidebar h2 {
+            color: #1e3a5f;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar a:hover {
+            color: #2874a6;
+        }
+
+        /* Main Content */
+        main {
+            grid-area: main;
+            background-color: white;
+            padding: 30px;
+        }
+
+        main h2 {
+            color: #1e3a5f;
+            margin-bottom: 15px;
+        }
+
+        main p {
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #eaf2f8;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #2874a6;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            grid-area: footer;
+            background-color: #1e3a5f;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px 60px auto 1fr 70px;
+
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>My Website</h1>
+        </header>
+
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Menu</h2>
+
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main>
+            <h2>Welcome to My Website</h2>
+
+            <p>
+                This webpage demonstrates the use of CSS Grid
+                Template Areas. Each section is assigned a name
+                and positioned using the grid layout.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>HTML</h3>
+                    <p>
+                        HTML is used to create the structure
+                        of webpages.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>CSS</h3>
+                    <p>
+                        CSS is used to style and design
+                        webpages.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Grid</h3>
+                    <p>
+                        CSS Grid is used to create powerful
+                        webpage layouts.
+                    </p>
+                </div>
+
+            </div>
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 My Website. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
